@@ -9,8 +9,10 @@ body {
     font-size: 3em;
     font-family: 'Arial Black', sans-serif;
     /* Otros estilos opcionales */
-    color: #333; /* Color del texto */
-    text-transform: uppercase; /* Convertir texto a mayúsculas */
+    color: #333;
+    /* Color del texto */
+    text-transform: uppercase;
+    /* Convertir texto a mayúsculas */
     /* Agrega más estilos según tus preferencias */
 }
 
@@ -152,7 +154,7 @@ nav ul li a {
 }
 
 .product-card button:hover {
-    background-color: #34495E ;
+    background-color: #34495E;
 }
 
 .tab-content {
@@ -161,4 +163,16 @@ nav ul li a {
 
 .tab-content.active {
     display: block;
+}
+
+/*Mensaje NO STOCK*/
+.not-available {
+    display: none;
+    /* Oculta el mensaje por defecto */
+    color: red;
+    /* Color de texto para indicar que no está disponible */
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+    /* Espacio arriba del mensaje */
 }

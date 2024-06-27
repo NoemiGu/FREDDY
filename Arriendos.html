@@ -21,7 +21,10 @@
             <a href="#services">Reparaciones</a>
             <a href="login.html">
                 <i class="fas fa-user"></i>
-            </a>            
+            </a>     
+            <a href="#carrito">
+                <i class="fas fa-shopping-bag"></i>
+            </a>        
         </div>
     </div>
     <div class="hero">
@@ -95,9 +98,11 @@
                             <p>1 día: $18</p>
                             <p>2 días: $30</p>
                             <p>3 días: $40</p>
+                            <p class="not-available">NO DISPONIBLE</p> <!-- Elemento para mostrar cuando no hay stock -->
                         </div>
                         <button onclick="openModal()">Seleccionar</button>
-                    </div>
+                        <p class="not-available">NO DISPONIBLE</p> <!-- Elemento para mostrar cuando no hay stock -->
+                    </div>                                      
                     <div class="product-card">
                         <img src="img/narvar.png" alt="Diamond back Bicycles Bicycle">
                         <p class="titulo-tarjetas">Mountain bike Electric bicycle</p>
@@ -195,6 +200,7 @@
     </footer>
 
     <script src="js/bicis.js"></script>
+    <script src="js/mensajes.js"></script>
 </body>
 
 </html>
