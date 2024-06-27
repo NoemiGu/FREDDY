@@ -13,7 +13,7 @@ body {
     justify-content: space-between;
     padding: 10px 20px;
     z-index: 1000;
-    transition: background-color 0.3s ease;
+
 }
 
 .navbar .titulo {
@@ -49,6 +49,18 @@ body {
 .navbar.scrolled {
     background-color: #333;
 }
+.register-link {
+    display: flex;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+}
+
+.register-link i {
+    margin-right: 5px; /* Espacio entre el ícono y el texto */
+}
+
 
 .content {
     margin-top: 80px;
