@@ -4,11 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NavBar con Imagen</title>
+    <title>Freddy Turbina</title>
     <link rel="stylesheet" href="CSS/narvar.css">
     <link rel="stylesheet" href="CSS/style.css">
     <link rel="stylesheet" href="css/seleccion.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
 
 </head>
 
@@ -32,6 +33,19 @@
         <h3>Brindamos servicios de alquiler de bicicletas asequibles y confiables en todo Chile.</h3>
     </div>
     <!--CONTENIDO PAGINA-->
+    <!--imagnes categorias-->
+    <div class="container-btn-categoria">
+        <div class="button">
+          <img src="img/venta.jpeg" alt="Botón 1">
+        </div>
+        <div class="button">
+          <img src="img/arriendoo.jpg" alt="Botón 2">
+        </div>
+        <div class="button">
+          <img src="img/reparacion.jpg" alt="Botón 3">
+        </div>
+    </div>
+
     <h1 class="titulo-principal">Arriendo de bicicletas</h1>
     <div class="container">
         <div class="sidebar">
@@ -65,7 +79,7 @@
         </div>
         <div class="main-content">
             <div id="bicicletas" class="tab-content active">
-                <h2>Bicicletas</h2>
+                <h2>Seleccion de bicicletas</h2>
                 <div class="product-grid">
                     <div class="product-card">
                         <div class="discount">15% OFF</div>
@@ -88,7 +102,7 @@
                             <p>2 días: $22</p>
                             <p>3 días: $32</p>
                         </div>
-                        <button onclick="openModal()">Seleccionar</button>
+                        <button onclick="showErrorAlert()">Seleccionar</button>
                     </div>
                     <div class="product-card">
                         <img src="img/narvar1.png" alt="Mountain bike Bicycle frame 29er">
@@ -98,10 +112,8 @@
                             <p>1 día: $18</p>
                             <p>2 días: $30</p>
                             <p>3 días: $40</p>
-                            <p class="not-available">NO DISPONIBLE</p> <!-- Elemento para mostrar cuando no hay stock -->
                         </div>
                         <button onclick="openModal()">Seleccionar</button>
-                        <p class="not-available">NO DISPONIBLE</p> <!-- Elemento para mostrar cuando no hay stock -->
                     </div>                                      
                     <div class="product-card">
                         <img src="img/narvar.png" alt="Diamond back Bicycles Bicycle">
@@ -201,6 +213,7 @@
 
     <script src="js/bicis.js"></script>
     <script src="js/mensajes.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 
 </html>

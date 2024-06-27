@@ -65,7 +65,6 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    margin: 50px auto; /* Margen vertical de 50px y centrado horizontal */
     margin-bottom: 40px; /* Ajusta según el espacio deseado */
 }
 

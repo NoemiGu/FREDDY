@@ -4,6 +4,41 @@ body {
     padding: 0;
 }
 
+/*imagenes categoria*/
+.container-btn-categoria {
+    display: flex;
+    width: 200%;
+    height: 240px;
+    margin-left: 210px;
+    margin-top: 20px;
+  }
+  
+  .button {
+    margin: 0 10px;
+    cursor: pointer;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .button:hover {
+    transform: translateY(-5px);
+  }
+  
+  .button img {
+    margin-top: 20px;
+    display: block;
+    width: 100%;
+    height: 240px;
+  }
+  
+  .button img:hover {
+    opacity: 0.8;
+  }
+
+
+
+
 .titulo-principal {
     text-align: center;
     font-size: 3em;
