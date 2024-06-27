@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Arriendo de Bicicletas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #D4843D;
+            color: white;
+            padding: 10px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header h1 {
+            margin-left: 20px;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            margin-right: 20px;
+        }
+        nav ul li {
+            margin-right: 20px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        .tabs {
+            display: flex;
+            justify-content: center;
+            background-color: #f1f1f1;
+            border-bottom: 2px solid #ccc;
+        }
+        .tabs button {
+            background-color: inherit;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            transition: background-color 0.3s;
+            font-size: 17px;
+        }
+        .tabs button:hover {
+            background-color: #ddd;
+        }
+        .tabs button.active {
+            background-color: #ccc;
+        }
+        .container {
+            display: flex;
+            padding: 20px;
+        }
+        .sidebar {
+            width: 20%;
+            padding: 20px;
+        }
+        .sidebar h2, .sidebar h3 {
+            margin-top: 0;
+        }
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .sidebar ul li {
+            margin-bottom: 10px;
+        }
+        .main-content {
+            width: 80%;
+            padding: 20px;
+        }
+        .main-content h2 {
+            margin-top: 0;
+        }
+        .product-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .product-card {
+            width: 23%;
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: center;
+            position: relative;
+        }
+        .product-card img {
+            width: 100%;
+        }
+        .product-card .discount {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: red;
+            color: white;
+            padding: 5px;
+            font-size: 12px;
+        }
+        .product-card .rating {
+            color: gold;
+            margin: 10px 0;
+        }
+        .product-card .price-list {
+            margin: 10px 0;
+            font-size: 14px;
+            color: #333;
+        }
+        .product-card button {
+            background-color: #D4843D;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            width: 100%;
+        }
+        .product-card button:hover {
+            background-color: #b36629;
+        }
+        footer {
+            background-color: #D4843D;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Freddy TURBINA</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="#registrate">Regístrate</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="tabs">
+        <button class="tab-link active" onclick="openTab(event, 'bicicletas')">Bicicletas</button>
+        <button class="tab-link" onclick="openTab(event, 'arriendo')">Arriendo de Bicicletas</button>
+        <button class="tab-link" onclick="openTab(event, 'reparaciones')">Reparaciones</button>
+    </div>
+    <div class="container">
+        <div class="sidebar">
+            <h2>Categorías</h2>
+            <ul>
+                <li>Traslados</li>
+                <li>Bicicletas
+                    <ul>
+                        <li>Ruta</li>
+                        <li>Mountainbike</li>
+                        <li>Triatlón</li>
+                        <li>Gravel / Cyclocross</li>
+                        <li>E-Bike</li>
+                    </ul>
+                </li>
+            </ul>
+            <h3>Filtrar por Talla</h3>
+            <select>
+                <option>Seleccionar Talla</option>
+            </select>
+            <h3>Filtrar por Año</h3>
+            <select>
+                <option>Seleccionar Año</option>
+            </select>
+        </div>
+        <div class="main-content">
+            <div id="bicicletas" class="tab-content">
+                <h2>Bicicletas</h2>
+                <!-- Contenido de Bicicletas -->
+            </div>
+            <div id="arriendo" class="tab-content active">
+                <h2>Arriendo de Bicicletas</h2>
+                <div class="product-grid">
+                    <div class="product-card">
+                        <div class="discount">15% OFF</div>
+                        <img src="bicicleta1.jpg" alt="Mountain bike Electric bicycle">
+                        <p class="rating">★★★★☆</p>
+                        <div class="price-list">
+                            <p>1 día: $15</p>
+                            <p>2 días: $25</p>
+                            <p>3 días: $35</p>
+                        </div>
+                        <button onclick="seleccionarBicicleta()">Seleccionar</button>
+                    </div>
+                    <div class="product-card">
+                        <img src="bicicleta2.jpg" alt="Road bicycle, HD black mountain">
+                        <p class="rating">★★★★☆</p>
+                        <div class="price-list">
+                            <p>1 día: $12</p>
+                            <p>2 días: $22</p>
+                            <p>3 días: $32</p>
+                        </div>
+                        <button onclick="seleccionarBicicleta()">Seleccionar</button>
+                    </div>
+                    <div class="product-card">
+                        <img src="bicicleta3.jpg" alt="Mountain bike Bicycle frame 29er">
+                        <p class="rating">★★★★☆</p>
+                        <div class="price-list">
+                            <p>1 día: $18</p>
+                            <p>2 días: $30</p>
+                            <p>3 días: $40</p>
+                        </div>
+                        <button onclick="seleccionarBicicleta()">Seleccionar</button>
+                    </div>
+                    <div class="product-card">
+                        <img src="bicicleta4.jpg" alt="Diamond back Bicycles Bicycle">
+                        <p class="rating">★★★★☆</p>
+                        <div class="price-list">
+                            <p>1 día: $20</p>
+                            <p>2 días: $35</p>
+                            <p>3 días: $45</p>
+                        </div>
+                        <button onclick="seleccionarBicicleta()">Seleccionar</button>
+                    </div>
+                </div>
+            </div>
+            <div id="reparaciones" class="tab-content">
+                <h2>Reparaciones</h2>
+                <!-- Contenido de Reparaciones -->
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Freddy TURBINA. Todos los derechos reservados.</p>
+    </footer>
+    <script>
+        function openTab(event, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tab-link");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(tabName).style.display = "block";
+            event.currentTarget.className += " active";
+        }
+        document.getElementById("arriendo").style.display = "block";
+
+        function seleccionarBicicleta() {
+            window.location.href = "formulario.html"; // Cambia esto a la URL de tu formulario
+        }
+    </script>
+</body>
+</html>

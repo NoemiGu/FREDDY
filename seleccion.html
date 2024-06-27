@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NavBar con Imagen</title>
+    <link rel="stylesheet" href="CSS/narvar.css">
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="css/seleccion.css">
+</head>
+
+<body>
+    <div class="navbar" id="navbar">
+        <div class="titulo">Freddy Turbina</div>
+        <div class="menu">
+            <a href="#home">Inicio</a>
+            <a href="#about">Acerca de</a>
+            <a href="#services">Servicios</a>
+            <a href="#contact">Contacto</a>
+        </div>
+    </div>
+    <div class="hero">
+        <h1>Servicios de alquiler de bicicletas.</h1>
+        <h3>Brindamos servicios de alquiler de bicicletas asequibles y confiables en todo Chile.</h3>
+    </div>
+
+<!--formulario-->
+
+    <div class="container">
+        <h1>Solicitud de Arriendo de Bicicletas</h1>
+        <!-- Línea divisoria -->
+        <hr class="modal-divider">
+        <div class="bike-container">
+        </div>
+        <form action="/submit-rental" method="POST">
+            <div class="form-group">
+                <label for="bike-type">Tipo de Bicicleta:</label>
+                <select id="bike-type" name="bike-type">
+                    <option value="mountain">Montaña</option>
+                    <option value="road">Ruta</option>
+                    <option value="electric">Eléctrica</option>
+                    <option value="hybrid">Híbrida</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="rental-start">Fecha de Inicio del Arriendo:</label>
+                <input type="date" id="rental-start" name="rental-start" required>
+            </div>
+            <div class="form-group">
+                <label for="rental-end">Fecha de Fin del Arriendo:</label>
+                <input type="date" id="rental-end" name="rental-end" required>
+            </div>
+            <div class="form-group">
+                <label for="payment-method">Forma de Pago:</label>
+                <select id="payment-method" name="payment-method">
+                    <option value="credit-card">Tarjeta de Crédito</option>
+                    <option value="credit-card">Tarjeta de Debito</option>
+                    <option value="paypal">PayPal</option>
+                    <option value="bank-transfer">Transferencia Bancaria</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="deposit">Depósito de Garantía:</label>
+                <input type="number" id="deposit" name="deposit" value="100" readonly>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Solicitar Arriendo">
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
