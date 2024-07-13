@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar Productos</title>
+    <link href="CSS/bootstrap.css" rel="stylesheet">
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="CSS/indicadores.css">
+    <link rel="stylesheet" href="CSS/admin.css">
+    <link rel="stylesheet" href="CSS/admbtn.css">
+
+</head>
+
+<body>
+     <!-- Barra de navegación -->
+     <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container">
+          <a class="navbar-brand" href="adm.html">
+              <i class="fas fa-bicycle"></i> Administración
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                  <li class="nav-item">
+                      <a class="nav-link" href="admpedidos.html">
+                          <i class="fas fa-key"></i> Arrendar
+                      </a>
+                  </li>
+
+                  <a class="nav-link" href="admpagregar.html">
+                      <i class="fas fa-plus"></i> Agregar Bicicletas
+                  </a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#">
+                          <i class="fas fa-users"></i> Usuarios
+                      </a>
+                  </li>
+                  <!-- Agrega más elementos de navegación -->
+              </ul>
+          </div>
+          <!-- Botón circular con imagen de perfil y menú desplegable -->
+          <div class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                  data-bs-toggle="dropdown" aria-expanded="false">
+                  <img src="img/logoadm.webp" alt="Imagen de perfil" class="rounded-circle" width="30" height="30">
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
+                  <li><a class="dropdown-item" href="perfil.html"> <i class="fas fa-user icono-perfil"></i>Mi perfil</i></a>
+                  </li>
+                  <li>
+                      <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="dropdown-item" href="index.html"><i
+                              class="fas fa-sign-out-alt  icono-salir"></i>Cerrar sesión</i></a></li>
+              </ul>
+          </div>
+      </div>
+  </nav>
+        <button class="cssbuttons-io-button-añadir" onclick="window.location.href='addproduc.html';">
+            Añadir Producto
+            <div class="icon">
+                <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
+                        fill="currentColor"></path>
+                </svg>
+            </div>
+        </button>
+
+
+    <!--LISTA DE PRODUCTOS-->
+    <div id="lista" class="content-section">
+      <div class="container mt-5"><!--main container-->
+          <h1>Listado de Bicicletas</h1>
+          <input class="form-control mb-4" id="tableSearch" type="text" placeholder="Buscar Productos...">
+          <div class="mt-2 table-responsive">
+              <table class="table table-hover">
+                  <thead class="table-dark">
+                      <tr>
+                          <th>ID</th>
+                          <th>Nombre</th>
+                          <th>Imagen</th>
+                          <th>Categoria</th>
+                          <th>Talla</th>
+                          <th>Aro</th>
+                          <th>Precio</th>
+                          <th>Acciones</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr>
+                          <td>1</td>
+                          <td>Mountain bike Electric bicycle</td>
+                          <td><img src="img/electrica.webp" alt="Hamburguesa de Pavo" height="50" width="80"></td>
+                          <td>Electrica</td>
+                          <td>L</td>
+                          <td>27</td>
+                          <td>$5.500</td>
+                          <td>
+                              <a class="btn btn-sm btn-editar" href="editarprod.html">
+                                  <i class="fas fa-edit"></i>
+                              </a>
+                              <a class="btn btn-sm btn-borrar btn-confirmar" href="">
+                                  <i class="fas fa-trash"></i>
+                              </a>                              
+                          </td>
+                      </tr>
+                      <tr>
+                          <td>2</td>
+                          <td>Mountain bike Electric bicycle</td>
+                          <td><img src="img/arriendoo.jpg" alt="Hamburguesa BBQ" height="50" width="80"></td>
+                          <td>Electrica</td>
+                          <td>L</td>
+                          <td>27</td>
+                          <td>$7.500</td>
+                          <td>
+                              <a class="btn btn-sm btn-editar" href="editarprod.html">
+                                  <i class="fas fa-edit"></i>
+                              </a>
+                              <a class="btn btn-sm btn-borrar btn-confirmar" href="">
+                                  <i class="fas fa-trash"></i>
+                              </a>
+                          </td>
+                      </tr>
+                      <tr>
+                          <td>3</td>
+                          <td>Mountain bike Electric bicycle</td>
+                          <td><img src="img/arriendo.webp" alt="Hamburguesa Vegana" height="50" width="80"></td>
+                          <td>Electrica</td>
+                          <td>L</td>
+                          <td>27</td>
+                          <td>$6.500</td>
+                          <td>
+                              <a class="btn btn-sm btn-editar" href="editarprod.html">
+                                  <i class="fas fa-edit"></i>
+                              </a>
+                              <a class="btn btn-sm btn-borrar btn-confirmar" href="">
+                                  <i class="fas fa-trash"></i>
+                              </a>
+                          </td>
+                      </tr>
+                  </tbody>
+              </table>
+<!--               <ul class="pagination text-center">
+                  <li class="page-item"><a class="page-link" href="#">Anterior</a></li>
+                  <li class="page-item"><a class="page-link" href="#">1</a></li>
+                  <li class="page-item active"><a class="page-link" href="#">2</a></li>
+                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  <li class="page-item"><a class="page-link" href="#">Siguiente</a></li>
+              </ul> -->
+          </div>
+      </div><!--main container ends-->
+  </div>
+
+  <script src="js/confirmacion.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agregar Productos</title>
+  <link href="CSS/bootstrap.css" rel="stylesheet">
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <link rel="stylesheet" href="CSS/indicadores.css">
+  <link rel="stylesheet" href="CSS/admin.css">
+  <link rel="stylesheet" href="CSS/admbtn.css">
+  <link rel="stylesheet" href="CSS/editartabla.css">
+
+
+</head>
+
+<body>
+   <!-- Barra de navegación -->
+   <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container">
+        <a class="navbar-brand" href="adm.html">
+            <i class="fas fa-bicycle"></i> Administración
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="admpedidos.html">
+                        <i class="fas fa-key"></i> Arrendar
+                    </a>
+                </li>
+
+                <a class="nav-link" href="admpagregar.html">
+                    <i class="fas fa-plus"></i> Agregar Bicicletas
+                </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <i class="fas fa-users"></i> Usuarios
+                    </a>
+                </li>
+                <!-- Agrega más elementos de navegación -->
+            </ul>
+        </div>
+        <!-- Botón circular con imagen de perfil y menú desplegable -->
+        <div class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                <img src="img/logoadm.webp" alt="Imagen de perfil" class="rounded-circle" width="30" height="30">
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="perfil.html"> <i class="fas fa-user icono-perfil"></i>Mi perfil</i></a>
+                </li>
+                <li>
+                    <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="index.html"><i
+                            class="fas fa-sign-out-alt  icono-salir"></i>Cerrar sesión</i></a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+  <!-- Formulario añadir -->
+  <div class="edit-form-container">
+    <div class="form-header">
+        <a href="admpagregar.html" class="back-arrow"><i class="fas fa-arrow-left"></i></a>
+        <h2>Editar Bicicleta</h2>
+    </div>
+    <form action="addproduc.html" method="get" enctype="multipart/form-data" class="was-validated">
+        
+        <div class="form-group">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required oninput="validarNombre()">
+            <div id="error-nombre" class="invalid-feedback">Rellene el campo solo con texto.</div>
+        </div>
+
+        <div class="form-group">
+            <label for="precio">Talla:</label>
+            <input type="text" id="precio" name="precio" required oninput="validarPrecio()">
+            <div id="error-precio" class="invalid-feedback">Ingrese un valor numerico.</div>
+          </div>
+
+        <div class="form-group">
+            <label for="precio">Aro:</label>
+            <input type="text" id="precio" name="precio" required oninput="validarPrecio()">
+            <div id="error-precio" class="invalid-feedback">Ingrese un valor numerico.</div>
+          </div>
+
+        <div class="form-group">
+          <label for="precio">Precio:</label>
+          <input type="text" id="precio" name="precio" required oninput="validarPrecio()">
+          <div id="error-precio" class="invalid-feedback">Ingrese un valor numerico.</div>
+        </div>
+        
+
+        <div class="form-group">
+            <label for="categoria">Categoría:</label>
+            <select id="categoria" name="categoria" required onchange="validarCategoria()">
+              <option value="" selected>Sin Seleccionar</option>
+              <option value="Urbana">Bicicleta Urbana</option>
+              <option value="Montaña">Bicicleta de Montaña</option>
+              <option value="Carretera">Bicicleta de Carretera</option>
+              <option value="Eléctrica">Bicicleta Eléctrica</option>
+              <option value="Infantil">Bicicleta Infantil</option>
+            </select>
+            <div id="error-categoria" class="invalid-feedback">Seleccione una categoría.</div>
+          </div>
+      
+
+        <div class="form-group">
+          <label for="imagen">Imagen del Producto:</label>
+          <input type="file" id="imagen" name="imagen" accept="image/*" required onchange="validarImagen()">
+          <div class="invalid-feedback">Seleccione una imagen antes de enviar.</div>
+      </div>
+
+        <div class="form-actions">
+            <button type="submit" formaction="productos.html">Añadir Producto</button>
+        </div>
+    </form>
+</div>
+  <script src="js/scripts.js"></script>
+
+
+
+
+</body>
+
+</html>
